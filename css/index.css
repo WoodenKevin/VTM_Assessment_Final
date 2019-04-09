@@ -1,0 +1,188 @@
+html, body
+{
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper
+{
+    width: 100%;
+    min-width: 1280px;
+    height: 100%;
+}
+
+.bg
+{
+    width: 100%;
+    min-width: 1280px;
+    background-image: url(../image/index/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+}
+.bg::before
+{
+    content: " ";
+    padding-top: 67.5%;
+    display: block;
+}
+
+/* 登录按钮 */
+.login
+{
+    padding-top: 3.4375%;
+    padding-right: 4.375%;
+    padding-bottom: 15.25%;
+    float: right;
+}
+
+/* LOGO */
+.logobox
+{
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+}
+.logobox *
+{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+}
+.whitebg
+{
+    width: 265px;
+    height: 143px;
+    background-color: #ffffff;
+    opacity: 0.961;
+    box-shadow: 7.217px 8.302px 9px 1px rgba(0, 0, 0, 0.18);
+}
+.blackborder
+{
+    width: 233px;
+    height: 117px;
+    border: 2px solid #585958;
+    box-sizing: border-box;
+}
+.logo img
+{
+    width: 215px;
+}
+
+.slogan
+{
+    margin: auto;
+    padding-top: 1.5%;
+    padding-bottom: 2.6667%;
+    font-size: 18px;
+    color: #3f3121;
+    opacity: 0.65;  
+    text-align: center;   
+}
+
+/* --- 搜索框 --- */
+.searchbar
+{
+    width: 391px;
+    height: 41px;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #ffffff;
+    box-shadow: 3.28px 3.774px 9.9px 1.1px rgba(0, 0, 0, 0.11);
+}
+.searchbar *
+{
+    outline: none;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    float: left;
+}
+.searchbar input
+{
+    width: 321px;
+    height: 41px;
+    margin: 0 0 0 35px;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+/* 改变placeholder颜色 */
+.searchbar input::-webkit-input-placeholder
+{
+    color: #000000;
+}
+.searchbar input:-moz-placeholder
+{
+    color: #000000;
+}
+.searchbar input::-moz-placeholder
+{
+    color: #000000;
+}
+.searchbar input:-ms-input-placeholder
+{
+    color: #000000;
+}
+.searchbar button
+{
+    width: 25px;
+    height: 41px;
+    margin: 0 10px 0 0;
+}
+
+.categories
+{
+    width: 289px;
+    height: 24px;
+    margin: auto;
+    padding-top: 2.6667%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+.categories *
+{
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+.cat
+{
+    width: 69px;
+    height: 24px;
+    border: 1px solid #868181;
+    border-radius: 12px;
+    background-color: #efefef;
+    font-weight: lighter;
+    color: #040404;
+    line-height: 24px;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.cat:hover
+{
+    border: 1px solid #eef0f0;
+    background-color: #636565;
+    color: #ffffff;
+    opacity: 0.76;
+}
+  
+/* 登录框 */
+.loginform
+{
+    width: 657px;
+    height: 451px;
+    margin: -225.5px auto 0 -328.5px;
+    border: 2px solid #4d4947;
+    background-color: #eff3f6;
+    box-shadow: inset 0px 0px 0px 0px #060001;
+    opacity: 0.902;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    z-index: 3;
+    box-sizing: border-box;
+} 
