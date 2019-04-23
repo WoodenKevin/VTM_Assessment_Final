@@ -1,0 +1,119 @@
+.book
+{
+    width: 201px;
+    height: 376px;
+}
+.book:hover
+{
+    cursor: pointer;
+}
+
+/* 封面 */
+.cover
+{
+    width: 201px;
+    height: 276px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.cover:hover
+{
+    cursor: pointer;
+}
+
+/* 评分 */
+.score
+{
+    width: 201px;
+    height: 31px;
+    padding: 18px 48px 0 48px;
+    box-sizing: border-box;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 标题 */
+.title
+{
+    width: 201px;
+    height: 12px;
+    margin: 15px auto 7px auto;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 12px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* 作者 */
+.author
+{
+    width: 201px;
+    height: 12px;
+    margin: 7px auto 15px auto;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 12px;
+    text-align: center;
+}
+
+/* 装饰线 */
+.decorationline
+{
+    width: 109px;
+    height: 1px;
+    margin: auto;
+    box-sizing: border-box;
+}
+.decorationline img
+{
+    float: left;
+}
+
+/* 页码栏 */
+.pagebar
+{
+    width: 139px;
+    height: 45px;
+    margin: auto;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+}
+
+/* 页码 */
+.page
+{
+    width: 19px;
+    height: 19px;
+    line-height: 19px;
+    text-align: center;
+}
+#selected /* 选中状态 */
+{
+    border-radius: 50%;
+    background-color: #444444;
+    color: #ffffff;
+}
+#hover /* 激活状态 */
+{
+    border-radius: 50%;
+    background-color: #444444;
+    color: #ffffff;
+}
+
+/* 页码说明 */
+.total
+{
+    width: 139px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+}

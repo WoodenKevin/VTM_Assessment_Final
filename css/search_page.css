@@ -1,0 +1,151 @@
+body
+{
+    background-color: #f4f4f4;
+}
+
+.searchpage-categories
+{
+    width: 85px;
+    height: 29px;
+    margin-left: 13px;
+    margin-right: 34px;
+    border: 1px solid #6d6b4d;
+    box-sizing: border-box;
+    background-color: #dcd79d;
+    color: rgba(4,4,4,0.71);
+    text-align: center;
+    line-height: 29px;
+    letter-spacing: 5px;
+}
+.searchpage-categories:hover
+{
+    cursor: pointer;
+}
+.search-category-wrapper
+{
+    width: 85px;
+    height: 122px;
+    margin-top: 41.5px;
+    align-self: flex-start;
+    position: absolute;
+    transform: translateX(921px);
+    -webkit-transform: translateX(921px);
+    z-index: 3;
+    overflow: hidden;
+}
+.search-category-wrap
+{
+    width: 85px;
+    height: 122px;
+    border-radius: 10px;
+    background-color: #dcd79d;
+    display: none;
+    /* display: flex;
+    display: -webkit-flex; */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#showCategory
+{
+    animation: showCategory 2s ease-in-out;
+    -webkit-animation: showCategory 2s ease-in-out;
+}
+@keyframes showCategory
+{
+    from {transform: translateY(-122px);}
+    to {transform: translateY(0);}
+}
+@-webkit-keyframes showCategory
+{
+    from {-webkit-transform: translateY(-122px);}
+    to {-webkit-transform: translateY(0);}
+}
+#hideCategory
+{
+    animation: hideCategory 2s ease-in-out;
+    -webkit-animation: hideCategory 2s ease-in-out;
+}
+@keyframes hideCategory
+{
+    from {transform: translateY(0);}
+    to {transform: translateY(-122px);}
+}
+@-webkit-keyframes hideCategory
+{
+    from {-webkit-transform: translateY(0);}
+    to {-webkit-transform: translateY(-122px);}
+}
+.searchpage-category
+{
+    height: 21px;
+    border-bottom: 1px solid rgba(4,4,4,0.71);;
+    text-align: center;
+    line-height: 22px;
+    letter-spacing: 5px;
+    color: rgba(4,4,4,0.71);
+}
+.searchpage-category:hover
+{
+    cursor: pointer;
+}
+
+#s-banner
+{
+    background-image: url(../image/search_page/search_page_banner.png);
+}
+.content
+{
+    width: 156px;
+    height: 40px;
+    margin: auto;
+    background-color: #dcd79d;
+    opacity: 0.741;
+    transform: translateY(7.1875vw);
+    font-size: 18px;
+    color: #010a20;
+    line-height: 40px;
+    text-align: center;
+}
+.line
+{
+    width: 307px;
+    height: 2px;
+    margin: auto;
+    transform: translateY(8.359375vw);
+}
+.line img
+{
+    float: left;
+}
+
+#searchpage-result-wrapper
+{
+    width: 100%;
+}
+#searchpage-result
+{
+    width: 1040px;
+    height: 1053px;
+    margin: 0 auto 201px auto;
+    background-color: #ffffff;
+}
+#searchpage-books-wrapper
+{
+    width: 1040px;
+    height: 976px;
+    padding: 84px 66px 62px 66px;
+    box-sizing: border-box;
+}
+#searchpage-books
+{
+    width: 908px;
+    height: 830px;
+    position: absolute;
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+} 

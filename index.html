@@ -5,17 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/index.js"></script>
+    <script src="script/jquery-3.4.0.min.js"></script>
+    <script src="script/mock.js"></script> <!-- 加载Mock.js -->
+    <script src="script/index.js"></script>
+    <script src="script/search_function.js"></script>
+    <script src="script/to_category_page_function.js"></script>
     <title>推书</title>
 </head>
 <body>
+    <!-- 加载动画 -->
+    <div class="loading">
+        <p>Loading</p>
+        <div class="loadingdots">
+            <div class="loadingdot"></div>
+            <div class="loadingdot"></div>
+            <div class="loadingdot"></div>
+        </div>
+    </div>
+
     <div class="wrapper">
         <!-- 背景 -->
         <div class="bg"></div>
-        <!-- 登录 -->
-        <div class="login">
+        <!-- 弹出登录框 -->
+        <div class="showpopup">
             <img id="login-icon" src="image/index/login-icon.png">
         </div>
+        <!-- 显示用户名 -->
+        <div class="username"></div>
         <!-- LOGO -->
         <div class="logobox">
             <div class="whitebg">
@@ -29,31 +45,49 @@
             The books that know you
         </div>
         <!-- 搜索框 -->
-        <form class="searchbar">
-            <input id="searchcontent" type="text" placeholder="搜索">
-            <button>
+        <form class="searchbar" id="index-searchbar">
+            <input class="searchcontent" id="index-searchcontent" type="text" placeholder="搜索">
+            <button class="search" id="index-search" type="button">
                 <img src="image/search_icon.png">
             </button>
         </form>
         <!-- 分类 -->
-        <div class="categories">
-            <div class="cat">
+        <div class="index-categories">
+            <div class="tocatgorypage index-category">
                 大类 1
             </div>
-            <div class="cat">
+            <div class="tocatgorypage index-category">
                 大类 2
             </div>
-            <div class="cat">
+            <div class="tocatgorypage index-category">
                 大类 3
             </div>
-            <div class="cat">
+            <div class="tocatgorypage index-category">
                 大类 4
             </div>
         </div>
     </div>
+
     <!-- 登录框 -->
     <div class="loginform">
-        <div class="logo"></div>
+        <div class="close">
+            <img id="close-icon" src="image/index/close_icon.png" alt="关闭">
+        </div>
+        <div class="f-logobox">
+            <div class="f-whitebg">
+                <div class="f-blackborder">
+                    <img src="image/tuishu_logo.png">
+                </div>
+            </div>
+        </div>
+        <form class="loginarea">
+            <div class="description">账 号：</div>
+            <input class="input" type="text" placeholder="用户名">
+            <div class="description">密 码：</div>
+            <input class="input" id="password" type="password" placeholder="﹡﹡﹡﹡﹡﹡﹡">
+            <button id="login">登录</button>
+        </form>
+        <div class="signup">注册</div>
     </div>
 </body>
 </html>

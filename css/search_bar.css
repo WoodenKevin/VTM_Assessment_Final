@@ -1,0 +1,111 @@
+/* --- 主页的搜索框 --- */
+#index-searchbar
+{
+    width: 391px;
+    height: 41px;
+    margin: auto;
+    border-radius: 21px;
+    background-color: #ffffff;
+    box-shadow: 3.28px 3.774px 9.9px 1.1px rgba(0, 0, 0, 0.11);
+}
+#index-searchbar *
+{
+    outline: none;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    float: left;
+}
+#index-searchbar input
+{
+    width: 321px;
+    height: 41px;
+    margin: 0 0 0 35px;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+/* 改变placeholder颜色 */
+#index-searchbar input::-webkit-input-placeholder
+{
+    color: #000000;
+}
+#index-searchbar input:-moz-placeholder
+{
+    color: #000000;
+}
+#index-searchbar input::-moz-placeholder
+{
+    color: #000000;
+}
+#index-searchbar input:-ms-input-placeholder
+{
+    color: #000000;
+}
+#index-search
+{
+    width: 25px;
+    height: 41px;
+    margin: 0 10px 0 0;
+}
+#index-search:hover
+{
+    cursor: pointer;
+}
+
+
+/* --- 搜索页及分类页的搜索框 --- */
+#navibar-searchbar
+{
+    width: 261px;
+    height: 27px;
+    border: 0.75px solid #000000;
+    border-radius: 13px;
+    box-sizing: border-box;
+    background-color: #fcfcfc;
+} 
+#navibar-searchbar *
+{
+    outline: none;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    float: left;
+}
+#navibar-searchbar input
+{
+    width: 209px;
+    height: 27px;
+    margin: 0 0 0 17px;
+    font-size: 17px;
+}
+/* 改变placeholder颜色 */
+#navibar-searchbar input::-webkit-input-placeholder
+{
+    color: #040404;
+    opacity: 0.59;
+}
+#navibar-searchbar input:-moz-placeholder
+{
+    color: #040404;
+    opacity: 0.59;
+}
+#navibar-searchbar input::-moz-placeholder
+{
+    color: #040404;
+    opacity: 0.59;
+}
+#navibar-searchbar input:-ms-input-placeholder
+{
+    color: #040404;
+    opacity: 0.59;
+}
+#navibar-search
+{
+    width: 18px;
+    height: 27px;
+    margin: 0 15px 0 0;
+}
+#navibar-search:hover
+{
+    cursor: pointer;
+}
