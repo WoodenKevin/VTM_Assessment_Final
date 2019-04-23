@@ -625,9 +625,7 @@ function readyToShowBooksOnCategoryPage()
                 async: true,
                 type: "GET",
                 success: function(data)
-                {
-                    console.log(data);
-                    
+                {                   
                     var bookclass = data.bookclass;
                     if (category)
                     {

@@ -35,7 +35,7 @@
     12.5% {transform: translateX(0);}
     25% {transform: translateX(-33.3333%);}
     37.5% {transform: translateX(-33.3333%);}
-    25% {transform: translateX(-66.6667%);}
+    50% {transform: translateX(-66.6667%);}
     62.5% {transform: translateX(-66.6667%);}
     75% {transform: translateX(-33.3333%);}
     87.5% {transform: translateX(-33.3333%);}
