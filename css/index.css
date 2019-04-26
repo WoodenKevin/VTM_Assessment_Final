@@ -193,7 +193,7 @@
     z-index: 3;
     display: none;
 }
-  
+/* 关闭按钮 */
 .close
 {
     width: 100%;
@@ -209,7 +209,8 @@
 {
     cursor: pointer;
 }
-.f-logobox
+/* LOGO */
+.loginform-logobox
 {
     width: 100%;
     margin: 39px auto 53px auto;
@@ -217,14 +218,14 @@
     display: -webkit-flex;
     justify-content: center;
 }
-.f-logobox *
+.loginform-logobox *
 {
     display: flex;
     display: -webkit-flex;
     justify-content: center;
     align-items: center;
 }
-.f-whitebg
+.loginform-whitebg
 {
     width: 148px;
     height: 83px;
@@ -232,7 +233,7 @@
     opacity: 0.961;
     box-shadow: 7.217px 8.302px 9px 1px rgba(0, 0, 0, 0.18);
 }
-.f-blackborder
+.loginform-blackborder
 {
     width: 127px;
     height: 65px;
@@ -240,11 +241,12 @@
     opacity: 0.851;
     box-sizing: border-box;
 }
-.f-logobox img
+.loginform-logobox img
 {
     width: 116px;
     height: auto;
 }
+/* 输入框 */
 .loginarea
 {
     width: 386px;
@@ -318,6 +320,7 @@
 {
     letter-spacing: -12px;
 }
+/* 登录按钮 */
 #login
 {
     width: 100px;
@@ -344,6 +347,7 @@
     background-color: #4d4947;
     color: #eff3f6;
 }
+/* 注册按钮 */
 .signup
 {
     margin: 0 141.6px 58px 0;

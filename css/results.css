@@ -35,7 +35,7 @@
 }
 
 /* 标题 */
-.title
+.searchpage-title
 {
     width: 201px;
     height: 12px;
@@ -43,6 +43,19 @@
     font-size: 12px;
     font-weight: bold;
     line-height: 12px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.categorypage-title
+{
+    width: 201px;
+    height: 15px;
+    margin: 13.5px auto 5.5px auto;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 15px;
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
@@ -107,6 +120,14 @@
     border-radius: 50%;
     background-color: #444444;
     color: #ffffff;
+}
+#last_page /* 上一页 */
+{
+    cursor: pointer;
+}
+#next_page /* 下一页 */
+{
+    cursor: pointer;
 }
 
 /* 页码说明 */

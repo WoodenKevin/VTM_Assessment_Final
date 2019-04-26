@@ -3,6 +3,7 @@ body
     background-color: #f4f4f4;
 }
 
+/* 分类 */
 .searchpage-categories
 {
     width: 85px;
@@ -90,10 +91,12 @@ body
     cursor: pointer;
 }
 
-#s-banner
+/* banner */
+#searchpage-banner
 {
     background-image: url(../image/search_page/search_page_banner.png);
 }
+/* 搜索内容 */
 .content
 {
     width: 156px;
@@ -107,6 +110,7 @@ body
     line-height: 40px;
     text-align: center;
 }
+/* 装饰线 */
 .line
 {
     width: 307px;
@@ -119,6 +123,7 @@ body
     float: left;
 }
 
+/* 搜索结果 */
 #searchpage-result-wrapper
 {
     width: 100%;

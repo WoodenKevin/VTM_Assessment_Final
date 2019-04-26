@@ -134,10 +134,6 @@ function readyToChangePage(books, totalbooks, totalpages)
             }
         }
     };
-    lastpage.onmouseover = function()
-    {
-        lastpage.style.cursor = "pointer";
-    };
 
     // 下一页
     var nextpage = document.getElementById("next_page");
@@ -209,10 +205,6 @@ function readyToChangePage(books, totalbooks, totalpages)
             }
         }
     };
-    nextpage.onmouseover = function()
-    {
-        nextpage.style.cursor = "pointer";
-    };
 
     // 页码跳转
     if (totalpages <= 5)
@@ -227,6 +219,7 @@ function readyToChangePage(books, totalbooks, totalpages)
     {
         (function(i)
         {
+            // 点击页码时
             pages[i].addEventListener("click", function()
             {
                 if (pages[i].innerHTML == "···")
@@ -327,6 +320,7 @@ function readyToChangePage(books, totalbooks, totalpages)
 // 显示具体页面
 function showCertainPage(books, totalbooks, page)
 {
+    // 移除原来的页面
     var result = document.getElementsByClassName("result")[0];
     var wrap = result.getElementsByClassName("books-wrapper")[0]
     if (wrap.getElementsByClassName("books")[0])
@@ -377,9 +371,17 @@ function showCertainPage(books, totalbooks, page)
             }
 
             // 添加标题元素
-            createNewElement(book, "div", "title");
+            if (document.getElementById("searchpage-books-wrapper"))
+            {
+                createNewElement(book, "div", "searchpage-title");
+                var title = document.getElementsByClassName("searchpage-title")[i];
+            }
+            else if (document.getElementById("categorypage-books-wrapper"))
+            {
+                createNewElement(book, "div", "categorypage-title");
+                var title = document.getElementsByClassName("categorypage-title")[i];
+            }
             // 添加标题
-            var title = document.getElementsByClassName("title")[i];
             var title_text = books[8 * (page - 1) + i].title;
             title.innerHTML = title_text;
 
@@ -419,7 +421,14 @@ function showDetail(info)
     // 添加封面
     var cover = document.getElementById("detail-cover");
     var image = info.cover.split(")")[0];
-    cover.style.backgroundImage = "url" + "(" + image + ")"; 
+    if (image) // 若有封面数据
+    {
+        cover.style.backgroundImage = "url" + "(" + image + ")"; 
+    }
+    else 
+    {
+        cover.style.backgroundImage = "url" + "(../image/book_cover_detailpage.png)"; 
+    }
 
     // 添加书名
     var title = document.getElementById("detail-title");
@@ -434,56 +443,153 @@ function showDetail(info)
     // 添加出版社
     var publisher = document.getElementById("detail-publisher");
     var publisher_text = info.publish;
-    publisher.innerHTML = publisher_text;
+    if (publisher_text) // 若有出版社数据
+    {
+        publisher.innerHTML = publisher_text;
+    }
+    else
+    {
+        publisher.innerHTML = "待更新";
+    }
 
     // 添加出版时间
     var publicationdate = document.getElementById("detail-publicationdate");
     var publicationdate_text = info.publishDate;
-    publicationdate.innerHTML = publicationdate_text;
+    if (publicationdate_text) // 若有出版时间数据
+    {
+        publicationdate.innerHTML = publicationdate_text;
+    }
+    else
+    {
+        publicationdate.innerHTML = "待更新";
+    }
 
     // 添加图书馆馆藏信息
     // 数目
     var total = document.getElementById("detail-total");
     var total_text = info.library[0].total;
-    total.innerHTML = total_text + "本";
+    if (total_text) // 若有图书馆藏书数目数据
+    {
+        total.innerHTML = total_text + "本";
+    }
+    else
+    {
+        total.innerHTML = "待更新";
+    }
     // 位置
     var position = document.getElementById("detail-position");
     var position_text = info.library[0].position;
-    position.innerHTML = position_text;
+    if (position_text) // 若有图书馆藏书位置数据
+    {
+        position.innerHTML = position_text;
+    }
+    else
+    {
+        position.innerHTML = "待更新";
+    }
 
     // 添加阅读类社群网站链接
     // 豆瓣
     var douban = document.getElementById("detail-douban");
     var douban_url = info.bookUrl[0].doubanUrl;
-    douban.href = douban_url;
+    if (douban_url) // 若有豆瓣链接数据
+    {
+        if (douban.style.display == "none")
+        {
+            douban.style.cssText = "display: flex; display: -webkit-flex;";
+        }
+        douban.href = douban_url;
+    }
+    else
+    {
+        douban.style.display = "none";
+    }
     // 知乎
     var zhihu = document.getElementById("detail-zhihu");
     var zhihu_url = info.bookUrl[0].zhihuUrl;
-    zhihu.href = zhihu_url;
+    if (zhihu_url) // 若有知乎链接数据
+    {
+        if (zhihu.style.display == "none")
+        {
+            zhihu.style.cssText = "display: flex; display: -webkit-flex;";
+        }
+        zhihu.href = zhihu_url;
+    }
+    else
+    {
+        zhihu.style.display = "none";
+    }
 
     // 添加购买链接
     // 京东
     var jingdong = document.getElementById("detail-jingdong");
     var jingdong_url = info.buyUrl[0].jDUrl;
-    jingdong.href = jingdong_url;
+    if (jingdong_url) // 若有京东链接数据
+    {
+        if (jingdong.style.display == "none")
+        {
+            jingdong.style.cssText = "display: flex; display: -webkit-flex;";
+        }
+        jingdong.href = jingdong_url;
+    }
+    else
+    {
+        jingdong.style.display = "none";
+    }
     // 当当
     var dangdang = document.getElementById("detail-dangdang");
     var dangdang_url = info.buyUrl[0].DangUrl;
-    dangdang.href = dangdang_url;
+    if (dangdang_url) // 若有当当链接数据
+    {
+        if (dangdang.style.display == "none")
+        {
+            dangdang.style.cssText = "display: flex; display: -webkit-flex;";
+        }
+        dangdang.href = dangdang_url;
+    }
+    else
+    {
+        dangdang.style.display = "none";
+    }
     // 亚马逊
     var amazon = document.getElementById("detail-amazon");
     var amazon_url = info.buyUrl[0].AmazonUrl;
-    amazon.href = amazon_url;
+    if (amazon_url) // 若有亚马逊链接数据
+    {
+        if (amazon.style.display == "none")
+        {
+            amazon.style.cssText = "display: flex; display: -webkit-flex;";
+        }
+        amazon.href = amazon_url;
+    }
+    else
+    {
+        amazon.style.display = "none";
+    }
 
     // 添加作者介绍
     var authorintro = document.getElementById("detail-authorintro");
     var authorintro_text = info.ahthorIntro;
-    authorintro.innerHTML = authorintro_text;
+    if (authorintro_text) // 若有作者介绍数据
+    {
+        authorintro.innerHTML = authorintro_text;
+    }
+    else
+    {
+        authorintro.innerHTML = "待更新";
+    }
 
     // 添加书籍介绍
     var bookintro = document.getElementById("detail-bookintro");
     var bookintro_text = info.bookIntro;
-    bookintro.innerHTML = bookintro_text;
+    if (bookintro_text) // 若有书籍介绍数据
+    {
+        bookintro.innerHTML = bookintro_text;
+    }
+    else
+    {
+        bookintro.innerHTML = "待更新";
+    }
 
     // 添加关闭按钮事件
     var button = document.getElementById("detailpage-closebutton");
@@ -498,6 +604,7 @@ function showDetail(info)
     });
 }
 
+// 显示书本
 function showBooks(books)
 {
     // 书本总数
@@ -512,11 +619,13 @@ function showBooks(books)
         var numbers_of_pages = parseInt(numbers_of_books / 8) + 1; // 向上取整
     }
 
+    // 显示初始的页码栏
     showInitialPageBar(numbers_of_pages);
+    // 页面切换功能
     readyToChangePage(books, numbers_of_books, numbers_of_pages);
 }
 
-// 显示具体分类的书本
+// 显示特定分类的书本
 function readyToChangeCategory(bookclass)
 {
     var categories = document.getElementsByClassName("category");
@@ -526,6 +635,7 @@ function readyToChangeCategory(bookclass)
     {
         (function(i)
         {
+            // 点击某一分类时
             categories[i].addEventListener("click", function()
             {
                 for (var j = 0; j < numbers_of_categories; j++)
@@ -541,6 +651,7 @@ function readyToChangeCategory(bookclass)
                 }
                 categories[i].id = "selectedcategory";
                               
+                // 移除原先的分类
                 var wrap = document.getElementsByClassName("books-wrapper")[0]
                 if (wrap.getElementsByClassName("books")[0])
                 {
@@ -559,6 +670,7 @@ function readyToChangeCategory(bookclass)
                 }
                 total.innerHTML = " ";
 
+                // 显示书本
                 showBooks(bookclass[i].bookInfo);
             })
             // 指针移动到某一分类上方时
@@ -627,12 +739,12 @@ function readyToShowBooksOnCategoryPage()
                 success: function(data)
                 {                   
                     var bookclass = data.bookclass;
-                    if (category)
+                    if (category) // 若从其它页面打开特定分类页
                     {
                         var info = bookclass[category].bookInfo;
                         var selected = document.getElementsByClassName("category")[category];
                     }
-                    else
+                    else // 直接打开分类页（测试用）
                     {
                         var info = bookclass[0].bookInfo;
                         var selected = document.getElementsByClassName("category")[0];
