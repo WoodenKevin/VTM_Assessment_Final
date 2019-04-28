@@ -283,7 +283,7 @@ function readyToChangePage(books, totalbooks, totalpages)
                 {
                     return false;
                 }
-                for (var j = 0; j < totalpages; j++)
+                for (var j = 0; j < total; j++)
                 {
                     if (pages[j].id == "selected" && j != i)
                     {
